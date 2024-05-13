@@ -36,12 +36,12 @@ func (h *MaxHeap) maxHeapifyUp(index int) {
 }
 
 func (h *MaxHeap) maxHeapifyDown(index int) {
-	lastelementIndex := len(h.array) - 1
+	lastElementIndex := len(h.array) - 1
 	left, right := getLeftChild(index), getRightChild(index)
 	childToCompare := 0
 
-	for left <= lastelementIndex {
-		if left == lastelementIndex {
+	for left <= lastElementIndex {
+		if left == lastElementIndex {
 			childToCompare = left
 		} else if h.array[left] > h.array[right] {
 			childToCompare = left
